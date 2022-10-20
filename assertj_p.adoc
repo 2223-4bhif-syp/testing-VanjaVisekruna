@@ -1,0 +1,72 @@
+= AssertJ
+
+:title-slide-background-image: back.jpg
+:source-language: java
+:source-highlighter: coderay
+
+== Was ist AssertJ
+
+image::back.jpg[background, size=cover]
+* Öffentliche Community-geschriebene Library
+* Geeignet für Java-Tests
+* Vielzahl von hilfreichen Fehlermeldungen
+* Verbessert Lesbarkeit des Test-Codes
+* Einfache & verständliche Benutzung
+
+== Assert bei Objektvergleich
+
+image::back.jpg[background, size=cover]
+
+[source,java]
+----
+Pupil pupil1 = new Pupil("Max", "Mustermann", 32);
+Pupil pupil2 = new Pupil("Max", "Mustermann", 32);
+
+assertThat(pupil1).isEqualTo(pupil2);
+assertThat(pupil1).isEqualToComparingFieldByField(pupil2);
+----
+
+== Assert bei Datum
+
+image::back.jpg[background, size=cover]
+
+[source,java]
+----
+LocalDate date = LocalDate.of(2024, 12, 1);
+
+assertThat(date).isAfter(LocalDate.now());
+assertThat(date).isBefore(LocalDate.now());
+assertThat(date).isEqualTo(LocalDate.now());
+----
+
+== Assert bei Datei
+
+image::back.jpg[background, size=cover]
+
+[source,java]
+----
+//Datei
+File file1 = new File("file1.txt");
+File file2 = new File("file2.txt");
+
+assertThat(file1).exists();
+assertThat(file1).hasSameContentAs(file2);
+assertThat(file1).canRead();
+assertThat(file1).canWrite();
+----
+
+== Assert bei Streams
+
+image::back.jpg[background, size=cover]
+
+[source,java]
+----
+ArrayList<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+
+assertThat(list.stream()).contains(1);
+assertThat(list.stream()).isNotEmpty();
+assertThat(list.stream()).hasSize(3);
+----
