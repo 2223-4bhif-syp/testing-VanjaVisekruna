@@ -4,6 +4,7 @@
 :source-language: java
 :source-highlighter: coderay
 
+
 == Was ist AssertJ
 
 image::back.jpg[background, size=cover]
@@ -12,6 +13,12 @@ image::back.jpg[background, size=cover]
 * Vielzahl von hilfreichen Fehlermeldungen
 * Verbessert Lesbarkeit des Test-Codes
 * Einfache & verständliche Benutzung
+
+== Vorteile
+
+image::back.jpg[background, size=cover]
+* Einfach zu verstehen
+* Leicht zu implementieren
 
 == Assert bei Objektvergleich
 
